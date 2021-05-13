@@ -66,6 +66,14 @@ if (emotion2=="Crying") {
     else if(emotion2=="Angry"){
         document.getElementById("e2").innerHTML="😡";
     }
+    var synth=window.speechSynthesis;   
+  speak_data="My Prediction Is That You Are"+Result[0].label;
+  var utterThis=new SpeechSynthesisUtterance(speak_data);
+  synth.speak(utterThis);
+  var synth1=window.speechSynthesis; 
+   speak_data="Or Maybe"+Result[1].label;
+  var utterThis1=new SpeechSynthesisUtterance(speak_data);
+  synth1.speak(utterThis1); 
 }
 }
 
